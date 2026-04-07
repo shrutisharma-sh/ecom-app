@@ -1,0 +1,41 @@
+# =========================
+# Backend (Spring Boot / Maven)
+# =========================
+ecom-backend/target/
+.mvn/wrapper/maven-wrapper.jar
+
+#
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# =========================
+# Frontend (React)
+# =========================
+ecom-frontend1/node_modules/
+ecom-frontend1/build/
+
+# =========================
+# IDEs
+# =========================
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.classpath
+.project
+.settings
+
+# =========================
+# Logs
+# =========================
+*.log
+
+# =========================
+# Environment & Secrets
+# =========================
+.env
+
+#
+ecom-backend/src/main/resources/application.properties
+
