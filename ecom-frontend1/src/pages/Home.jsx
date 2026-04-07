@@ -66,16 +66,15 @@ export default function Home() {
         </div>
 
         {/* HERO IMAGE */}
-        <div className="mt-10 md:mt-0">
+        <div className="mt-10 md:mt-0 w-full md:w-[600px]">
           <img
-            src="HERO_IMAGE_URL"
+            src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg"
             alt="shopping"
-            className="w-[350px] rounded-2xl shadow-2xl hover:scale-105 transition duration-500"
+            className="w-full h-[350px] md:h-[450px] object-cover rounded-3xl shadow-2xl hover:scale-105 transition duration-500 brightness-90 contrast-110"
           />
         </div>
 
       </section>
-
 
       {/* TRENDING */}
       <section className="py-20 text-center">
