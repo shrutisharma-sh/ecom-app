@@ -25,7 +25,7 @@ Frontend:
 
 * React
 * Axios
-* CSS
+* TailwindCSS
 
 Other Tools:
 
