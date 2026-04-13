@@ -5,10 +5,7 @@ import ProductCard from "../components/ProductCard";
 export default function Home() {
 
   const popupImages = [
-    "IMAGE_URL_1",
-    "IMAGE_URL_2",
-    "IMAGE_URL_3",
-    "IMAGE_URL_4"
+
   ];
 
   const [index, setIndex] = useState(0);

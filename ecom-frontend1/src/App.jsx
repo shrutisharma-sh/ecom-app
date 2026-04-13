@@ -19,11 +19,12 @@ function App() {
 
   return (
     <>
+
       <Navbar 
         isAuthenticated={isAuthenticated} 
         setIsAuthenticated={setIsAuthenticated} 
       />
-
+       <h1>Shruti 🔥</h1>
       <Routes>
         <Route path="/" element={<Home />} />
 
