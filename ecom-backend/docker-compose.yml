@@ -2,7 +2,6 @@ version: "3.8"
 
 services:
   db:
-
     image: mysql:8.1
     environment:
       MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
@@ -15,36 +14,26 @@ services:
     volumes:
       - mysql-data:/var/lib/mysql
     restart: unless-stopped
-
     healthcheck:
-      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "shruti", "-pshruti123" ]
+      test: ["CMD-SHELL", "mysqladmin ping -h localhost -u$MYSQL_USER -p$MYSQL_PASSWORD"]
       interval: 10s
       timeout: 5s
       retries: 10
 
   backend:
-
     build: .
     ports:
       - "8080:8080"
     depends_on:
-      - db
+      db:
+        condition: service_healthy
     environment:
       SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/${MYSQL_DATABASE}
       SPRING_DATASOURCE_USERNAME: ${MYSQL_USER}
       SPRING_DATASOURCE_PASSWORD: ${MYSQL_PASSWORD}
-      restart: unless-stopped
-
-  frontend:
-    build: ../ecom-frontend1
-    ports:
-      - "5173:5173"
-    depends_on:
-      - backend
-    volumes:
-      - ../ecom-frontend1:/app
-      - /app/node_modules
     restart: unless-stopped
+
+
 
 volumes:
   mysql-data:
