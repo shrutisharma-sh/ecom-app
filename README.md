@@ -32,12 +32,6 @@ Other Tools:
 * Docker (learning and integrating)
 * Git
 
-## Project Structure
-
-ecom-project/
-├── ecom-backend/
-├── ecom-frontend1/
-├── README.md
 
 ## How to Run
 
